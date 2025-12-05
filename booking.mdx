@@ -1,0 +1,69 @@
+---
+title: Booking Facilities
+description: How to book sports facilities and activities on Game Theory
+---
+
+## Booking Process
+
+Booking facilities on Game Theory is simple and straightforward. Our platform allows you to reserve courts, pools, and equipment in advance, ensuring you always have access when you need it.
+
+<Steps>
+  <Step title="Log In" icon="log-in">
+    Access your Game Theory account through the mobile app or website.
+  </Step>
+  <Step title="Select Facility" icon="search">
+    Choose from available sports facilities like badminton courts or swimming pools.
+  </Step>
+  <Step title="Choose Time Slot" icon="clock">
+    Pick your preferred date and time slot from the available options.
+  </Step>
+  <Step title="Confirm Booking" icon="check-circle">
+    Review details and complete the reservation with instant confirmation.
+  </Step>
+</Steps>
+
+## Available Sports
+
+<Tabs>
+  <Tab title="Indoor Sports" icon="home">
+    Book badminton, squash, table tennis, and basketball courts with indoor climate control.
+  </Tab>
+  <Tab title="Outdoor Sports" icon="sun">
+    Reserve football fields, padel courts, and pickleball courts for outdoor activities.
+  </Tab>
+  <Tab title="Water Sports" icon="droplets">
+    Access swimming pools and aquatic facilities for laps or leisure swimming.
+  </Tab>
+</Tabs>
+
+<CodeGroup tabs="Mobile App,Web Portal">
+  ```javascript
+// Example booking API call
+const booking = await fetch('/api/bookings', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    facilityId: 'badminton-court-1',
+    startTime: '2024-01-15T10:00:00Z',
+    duration: 60
+  })
+});
+  ```
+  ```python
+import requests
+response = requests.post('/api/bookings', json={
+    'facility_id': 'badminton-court-1',
+    'start_time': '2024-01-15T10:00:00Z',
+    'duration': 60
+})
+print(response.json())
+  ```
+</CodeGroup>
+
+<Callout kind="tip">
+  Bookings can be made up to 7 days in advance, with a maximum duration of 2 hours per session.
+</Callout>
+
+<Expandable title="Cancellation Policy" default-open="false">
+  Free cancellation up to 2 hours before your booking. Late cancellations may incur a fee.
+</Expandable>
